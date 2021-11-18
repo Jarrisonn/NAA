@@ -1,0 +1,66 @@
+﻿@model NationalAdmissionAgency.Data.Models.Domain.Application
+
+@{
+    ViewBag.Title = "GetApplication";
+}
+
+<h2>GetApplication</h2>
+
+<div>
+    <h4>Application</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Course)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Statement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Statement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TeacherContact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeacherContact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TeacherReference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeacherReference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Offer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Offer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Firm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Firm)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ApplicationId }) |
+    @Html.ActionLink("Back to List", "GetUsers")
+</p>

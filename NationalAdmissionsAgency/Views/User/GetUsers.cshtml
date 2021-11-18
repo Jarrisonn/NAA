@@ -1,0 +1,45 @@
+﻿@model IEnumerable<NationalAdmissionAgency.Data.Models.Domain.User>
+
+@{
+    ViewBag.Title = "GetUsers";
+}
+
+<h2>GetUsers</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddUser")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.ActionLink(item.Name, "GetUser", new { id = item.UserId, Controller = "User" })
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Address)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Phone)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "UpdateUser", new { id = item.UserId }) |
+        @Html.ActionLink("Details", "GetUser", new { id = item.UserId }) |
+        @Html.ActionLink("Delete", "DeleteUser", new { id = item.UserId })
+    </td>
+</tr>
+}
+
+</table>
